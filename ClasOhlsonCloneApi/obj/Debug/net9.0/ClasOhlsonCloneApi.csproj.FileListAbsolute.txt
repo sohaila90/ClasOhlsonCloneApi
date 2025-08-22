@@ -69,3 +69,4 @@
 /Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net9.0/ClasOhlsonCloneApi.genruntimeconfig.cache
 /Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net9.0/ref/ClasOhlsonCloneApi.dll
 /Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/bin/Debug/net9.0/Scalar.AspNetCore.dll
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net9.0/ClasOhlsonCloneApi.sourcelink.json

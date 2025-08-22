@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClasOhlsonCloneApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f578f4ec7cd9fae544df3d7c07247ff5d37b084e")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClasOhlsonCloneApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClasOhlsonCloneApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,7 +1,8 @@
 
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MySql.Data.MySqlClient;
+using MySqlConnector;
+
 
 
 namespace ClasOhlsonCloneApi
@@ -11,18 +12,20 @@ namespace ClasOhlsonCloneApi
     [Route("[controller]")]
     public class UsersController : ControllerBase
     {
-        private readonly IConfiguration _configuration;
         private readonly string _connectionString;
 
         public UsersController(IConfiguration configuration)
         {
-            _configuration = configuration;
+            var mysqlPassword = configuration.GetValue<string>("MYSQL_PASSWORD");
 
-            // var mysqlPassword = Environment.GetEnvironmentVariable("MYSQL_PASSWORD");
-            // if (mysqlPassword == null) throw new ArgumentNullException(nameof(mysqlPassword));
-            _connectionString = $"server=localhost;database=test_schema;user=root;password=NyttSterktPassord123!;";
-        } 
+            if (mysqlPassword == null)
+            {
+                throw new InvalidOperationException("\nThe environment variable 'MYSQL_PASSWORD' is not set.");
+            }
+            _connectionString = $"server=localhost;database=test_schema;user=apiuser;password={mysqlPassword};";
+        }
 
+        
         [HttpGet]
         public IActionResult GetUsers()
         {
