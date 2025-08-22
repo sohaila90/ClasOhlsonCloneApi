@@ -21,7 +21,7 @@ namespace ClasOhlsonCloneApi
             // var mysqlPassword = Environment.GetEnvironmentVariable("MYSQL_PASSWORD");
             // if (mysqlPassword == null) throw new ArgumentNullException(nameof(mysqlPassword));
             _connectionString = $"server=localhost;database=test_schema;user=root;password=NyttSterktPassord123!;";
-        }
+        } 
 
         [HttpGet]
         public IActionResult GetUsers()
