@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "aGBbnDOdAw4=",
+  "dgSpecHash": "INZDaxCBIlE=",
   "success": true,
   "projectFilePath": "/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/ClasOhlsonCloneApi.csproj",
   "expectedPackageFiles": [
@@ -32,7 +32,7 @@
     "/Users/Sohaila/.nuget/packages/microsoft.openapi/1.6.14/microsoft.openapi.1.6.14.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/mysql.data/9.4.0/mysql.data.9.4.0.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/mysqlconnector/2.4.0/mysqlconnector.2.4.0.nupkg.sha512",
-    "/Users/Sohaila/.nuget/packages/pomelo.entityframeworkcore.mysql/9.0.0-rc.1.efcore.9.0.0/pomelo.entityframeworkcore.mysql.9.0.0-rc.1.efcore.9.0.0.nupkg.sha512",
+    "/Users/Sohaila/.nuget/packages/pomelo.entityframeworkcore.mysql/9.0.0/pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/scalar.aspnetcore/2.6.9/scalar.aspnetcore.2.6.9.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/swashbuckle.aspnetcore/6.6.2/swashbuckle.aspnetcore.6.6.2.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/swashbuckle.aspnetcore.swagger/6.6.2/swashbuckle.aspnetcore.swagger.6.6.2.nupkg.sha512",

@@ -14,7 +14,7 @@
       "dotnetRunMessages": true,
       "launchBrowser": true,
       "launchUrl": "users",
-      "applicationUrl": "http://localhost:5072",
+      "applicationUrl": "http://localhost:5050",
       "environmentVariables": {
         "ASPNETCORE_ENVIRONMENT": "Development",
         "MYSQL_PASSWORD": "SterktPassord123!"
@@ -27,7 +27,8 @@
       "launchUrl": "users",
       "applicationUrl": "http://localhost:5072/users",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQL_PASSWORD": "SterktPassord123!"
       }
     },
     "IIS Express": {
@@ -35,7 +36,8 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQL_PASSWORD": "SterktPassord123!"
       }
     }
   }

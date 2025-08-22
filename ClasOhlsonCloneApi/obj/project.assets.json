@@ -479,7 +479,7 @@
           }
         }
       },
-      "Pomelo.EntityFrameworkCore.MySql/9.0.0-rc.1.efcore.9.0.0": {
+      "Pomelo.EntityFrameworkCore.MySql/9.0.0": {
         "type": "package",
         "dependencies": {
           "Microsoft.EntityFrameworkCore.Relational": "[9.0.0, 9.0.999]",
@@ -1809,10 +1809,10 @@
         "mysqlconnector.nuspec"
       ]
     },
-    "Pomelo.EntityFrameworkCore.MySql/9.0.0-rc.1.efcore.9.0.0": {
-      "sha512": "jJ3aVp2FWamRA4Db6IJnt6MsC5A45vfLWDpy8VIiEV/CQiDFDgQb7Fk8O7Zyb8BVDhU6TfEXHujVBsFYxbwQbQ==",
+    "Pomelo.EntityFrameworkCore.MySql/9.0.0": {
+      "sha512": "cl7S4s6CbJno0LjNxrBHNc2xxmCliR5i40ATPZk/eTywVaAbHCbdc9vbGc3QThvwGjHqrDHT8vY9m1VF/47o0g==",
       "type": "package",
-      "path": "pomelo.entityframeworkcore.mysql/9.0.0-rc.1.efcore.9.0.0",
+      "path": "pomelo.entityframeworkcore.mysql/9.0.0",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
@@ -1820,7 +1820,7 @@
         "icon.png",
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.dll",
         "lib/net8.0/Pomelo.EntityFrameworkCore.MySql.xml",
-        "pomelo.entityframeworkcore.mysql.9.0.0-rc.1.efcore.9.0.0.nupkg.sha512",
+        "pomelo.entityframeworkcore.mysql.9.0.0.nupkg.sha512",
         "pomelo.entityframeworkcore.mysql.nuspec"
       ]
     },
@@ -2907,7 +2907,7 @@
       "Microsoft.AspNetCore.OpenApi >= 8.0.19",
       "MySql.Data >= 9.4.0",
       "MySqlConnector >= 2.4.0",
-      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0-rc.1.efcore.9.0.0",
+      "Pomelo.EntityFrameworkCore.MySql >= 9.0.0",
       "Scalar.AspNetCore >= 2.6.9",
       "Swashbuckle.AspNetCore >= 6.6.2"
     ]
@@ -2973,7 +2973,7 @@
           },
           "Pomelo.EntityFrameworkCore.MySql": {
             "target": "Package",
-            "version": "[9.0.0-rc.1.efcore.9.0.0, )"
+            "version": "[9.0.0, )"
           },
           "Scalar.AspNetCore": {
             "target": "Package",

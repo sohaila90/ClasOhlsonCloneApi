@@ -1,8 +1,21 @@
-using Microsoft.AspNetCore.Authentication.Negotiate;
+using ClasOhlsonCloneApi;
+using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
-
+using Microsoft.AspNetCore.Authentication.Negotiate;
+Console.WriteLine("MYSQL_PASSWORD fra launchSettings: " + Environment.GetEnvironmentVariable("MYSQL_PASSWORD"));
 
 var builder = WebApplication.CreateBuilder(args);
+
+// Hent passord fra user-secrets eller env
+var mysqlPassword = builder.Configuration["MYSQL_PASSWORD"];
+
+// Sett opp connection string manuelt
+var connectionString = $"server=localhost;database=test_schema;user=apiuser;password={mysqlPassword};";
+
+// Legg til DbContext
+builder.Services.AddDbContext<AppDbContext>(options =>
+    options.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString)));
+
 builder.Services.AddControllers();
 builder.Services.AddAuthentication(NegotiateDefaults.AuthenticationScheme).AddNegotiate();
 builder.Services.AddAuthorization(options =>
@@ -15,7 +28,7 @@ builder.Services.AddCors(options =>
     options.AddPolicy("AllowFrontend",
         policy =>
         {
-            policy.WithOrigins("http://localhost:5173") // din Vue-app
+            policy.WithOrigins("http://localhost:5173")
                 .AllowAnyHeader()
                 .AllowAnyMethod();
         });
@@ -26,11 +39,12 @@ if (app.Environment.IsDevelopment())
 {
     app.MapScalarApiReference();
 }
+
 app.UseCors("AllowFrontend");
-// app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
+
 
 
 // // Denne legger til Swagger
