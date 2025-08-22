@@ -16,7 +16,8 @@
       "launchUrl": "users",
       "applicationUrl": "http://localhost:5072",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development"
+        "ASPNETCORE_ENVIRONMENT": "Development",
+        "MYSQL_PASSWORD": "SterktPassord123!"
       }
     },
     "https": {

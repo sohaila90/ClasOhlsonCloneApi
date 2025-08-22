@@ -34,7 +34,7 @@ namespace ClasOhlsonCloneApi
 
             using (var connection = new MySqlConnection(_connectionString))
             {
-                connection.Open();
+                 connection.Open();
                 var query = new MySqlCommand("SELECT * FROM users", connection);
                 using (var reader = query.ExecuteReader())
                 {
