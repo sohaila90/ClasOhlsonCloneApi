@@ -1,0 +1,6 @@
+@ClasOhlsonCloneApi_HostAddress = http://localhost:5072
+
+GET {{ClasOhlsonCloneApi_HostAddress}}/Users/
+Accept: application/json
+
+###

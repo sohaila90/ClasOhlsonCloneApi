@@ -1,0 +1,8 @@
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.csproj.AssemblyReference.cache
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/rpswa.dswa.cache.json
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.AssemblyInfoInputs.cache
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.AssemblyInfo.cs
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.csproj.CoreCompileInputs.cache
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.MvcApplicationPartsAssemblyInfo.cs
+/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/obj/Debug/net8.0/ClasOhlsonCloneApi.MvcApplicationPartsAssemblyInfo.cache
