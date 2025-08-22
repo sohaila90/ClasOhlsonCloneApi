@@ -5,6 +5,7 @@ using Microsoft.AspNetCore.Authentication.Negotiate;
 Console.WriteLine("MYSQL_PASSWORD fra launchSettings: " + Environment.GetEnvironmentVariable("MYSQL_PASSWORD"));
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Configuration.AddUserSecrets<Program>();
 
 // Hent passord fra user-secrets eller env
 var mysqlPassword = builder.Configuration["MYSQL_PASSWORD"];

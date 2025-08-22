@@ -16,8 +16,7 @@
       "launchUrl": "users",
       "applicationUrl": "http://localhost:5050",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "MYSQL_PASSWORD": "SterktPassord123!"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "https": {
@@ -27,8 +26,7 @@
       "launchUrl": "users",
       "applicationUrl": "http://localhost:5072/users",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "MYSQL_PASSWORD": "SterktPassord123!"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     },
     "IIS Express": {
@@ -36,8 +34,7 @@
       "launchBrowser": true,
       "launchUrl": "swagger",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Development",
-        "MYSQL_PASSWORD": "SterktPassord123!"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }
