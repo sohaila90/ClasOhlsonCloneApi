@@ -2,7 +2,7 @@ using ClasOhlsonCloneApi;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 using Microsoft.AspNetCore.Authentication.Negotiate;
-Console.WriteLine("MYSQL_PASSWORD fra launchSettings: " + Environment.GetEnvironmentVariable("MYSQL_PASSWORD"));
+// Console.WriteLine("MYSQL_PASSWORD fra launchSettings: " + Environment.GetEnvironmentVariable("MYSQL_PASSWORD"));
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Configuration.AddUserSecrets<Program>();

@@ -1,5 +1,3 @@
-using System.Collections;
-
 namespace ClasOhlsonCloneApi;
 
 public class PostData
