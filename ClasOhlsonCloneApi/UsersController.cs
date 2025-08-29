@@ -7,6 +7,7 @@ namespace ClasOhlsonCloneApi;
 
 [AllowAnonymous]
 [ApiController]
+// Alle routes starter nå med /users
 [Route("[controller]")]
 public class UsersController : ControllerBase
 {
