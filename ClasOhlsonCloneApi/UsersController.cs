@@ -95,7 +95,7 @@ public class UsersController : ControllerBase
         return Ok(user);
     }
 
-    [HttpPost("/register")]
+    [HttpPost("register")]
     public IActionResult AddUser([FromBody] PostData newUser)
     {
         Console.WriteLine(
@@ -127,21 +127,24 @@ public class UsersController : ControllerBase
         return CreatedAtAction(nameof(GetUser), new { id = newUser.Id }, newUser);
     }
 
-    [HttpPost("/login")]
-    public IActionResult GetUserInfo([FromBody] PostData userInfo)
+    [AllowAnonymous]
+    [HttpPost("login")]
+    public IActionResult GetUserInfo([FromBody] LoginData loginInfo)
     {
+        Console.WriteLine($"Fra front: {loginInfo.Email}, {loginInfo.Password}");
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
         var query = new MySqlCommand("SELECT * FROM users WHERE email = @email AND password = @password", connection);
-        query.Parameters.AddWithValue("@Email", userInfo.Email);
-        query.Parameters.AddWithValue("@Password", userInfo.Password);
+        query.Parameters.AddWithValue("@email", loginInfo.Email);
+        query.Parameters.AddWithValue("@password", loginInfo.Password);
 
         using var reader = query.ExecuteReader();
-        
+        Console.WriteLine($"Sjekker i DB med Email={loginInfo.Email}, Password={loginInfo.Password}");
+
         {
             if (reader.Read())
             {
-                return Ok(userInfo.Email);
+                return Ok(loginInfo.Email);
                 
             }
             else
