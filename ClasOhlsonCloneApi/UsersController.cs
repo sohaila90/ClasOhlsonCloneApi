@@ -147,7 +147,7 @@ public class UsersController : ControllerBase
                 var hashFromDb = reader.GetString(5);
                 Console.WriteLine($"Hash fra DB: {hashFromDb}");
                 var isValid = BCrypt.Net.BCrypt.Verify(loginInfo.Password, hashFromDb);
-
+        
                 if (isValid)
                 {
                     return Ok(new { message = "Login successful", email = loginInfo.Email });
