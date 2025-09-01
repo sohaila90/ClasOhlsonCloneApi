@@ -102,6 +102,8 @@ public class UsersController : ControllerBase
         Console.WriteLine(
             $"Mottatt fra frontend: Fornavn: {newUser.Firname}, {newUser.Lastname}, {newUser.Email}, {newUser.Number}, {newUser.Password}");
 
+        var passwordHash = BCrypt.Net.BCrypt.HashPassword(newUser.Password);
+        newUser.Password = passwordHash;
         using (var connection = new MySqlConnection(_connectionString))
         {
             connection.Open();
@@ -132,26 +134,32 @@ public class UsersController : ControllerBase
     [HttpPost("login")]
     public IActionResult GetUserInfo([FromBody] LoginData loginInfo)
     {
-        Console.WriteLine($"Fra front: {loginInfo.Email}, {loginInfo.Password}");
+        Console.WriteLine($"Fra front: {loginInfo.Email}");
         using var connection = new MySqlConnection(_connectionString);
         connection.Open();
-        var query = new MySqlCommand("SELECT * FROM users WHERE email = @email AND password = @password", connection);
+        var query = new MySqlCommand("SELECT * FROM users WHERE email = @email", connection);
         query.Parameters.AddWithValue("@email", loginInfo.Email);
-        query.Parameters.AddWithValue("@password", loginInfo.Password);
 
         using var reader = query.ExecuteReader();
-        Console.WriteLine($"Sjekker i DB med Email={loginInfo.Email}, Password={loginInfo.Password}");
-
-        {
-            if (reader.Read())
+        
+            if (reader.Read()) // Sjekker om vi fant bruker
             {
-                return Ok(loginInfo.Email);
-                
+                var hashFromDb = reader.GetString(5);
+                Console.WriteLine($"Hash fra DB: {hashFromDb}");
+                var isValid = BCrypt.Net.BCrypt.Verify(loginInfo.Password, hashFromDb);
+
+                if (isValid)
+                {
+                    return Ok(new { message = "Login successful", email = loginInfo.Email });
+                }
+                else
+                {
+                    return Unauthorized(new { message = "Wrong password" });
+                }
             }
             else
             {
-                return Unauthorized();
+                return Unauthorized(new { message = "User not found" });
             }
-        }
     }
-}
+    }

@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "INZDaxCBIlE=",
+  "dgSpecHash": "82XZh4myFns=",
   "success": true,
-  "projectFilePath": "/Users/Sohaila/Desktop/Fullstack/ClasOhlsonCloneApi/ClasOhlsonCloneApi/ClasOhlsonCloneApi.csproj",
+  "projectFilePath": "/Users/Sohaila/Desktop/ClasOhlsonCloneApi/ClasOhlsonCloneApi/ClasOhlsonCloneApi.csproj",
   "expectedPackageFiles": [
+    "/Users/Sohaila/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/bouncycastle.cryptography/2.5.1/bouncycastle.cryptography.2.5.1.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/google.protobuf/3.30.0/google.protobuf.3.30.0.nupkg.sha512",
     "/Users/Sohaila/.nuget/packages/k4os.compression.lz4/1.3.8/k4os.compression.lz4.1.3.8.nupkg.sha512",
