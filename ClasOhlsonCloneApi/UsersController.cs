@@ -55,12 +55,7 @@ public class UsersController : ControllerBase
 
 
         }
-
-        // foreach (var user in results)
-        // {
-        //     // Console.Wri   teLine(
-        //     //     $"ID: {user.Id} {user.Firname} {user.Lastname} {user.Email} {user.Number} {user.Password}");
-        // }
+        
 
         return Ok(results);
     }
