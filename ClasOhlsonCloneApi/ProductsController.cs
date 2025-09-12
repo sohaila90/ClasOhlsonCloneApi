@@ -1,5 +1,4 @@
 using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Http.HttpResults;
 using Microsoft.AspNetCore.Mvc;
 using MySqlConnector;
 
@@ -12,9 +11,10 @@ namespace ClasOhlsonCloneApi;
 
 public class ProductsController : ControllerBase
 {
-    private string _connectionString;
+    private readonly ILogger<ProductsController> _logger;
+    private readonly string _connectionString;
 
-    public ProductsController(IConfiguration configuration)
+    public ProductsController(IConfiguration configuration, ILogger<ProductsController> logger)
     {
         var mysqlPassword = configuration.GetValue<string>("MYSQL_PASSWORD");
         if (mysqlPassword == null)
@@ -22,7 +22,8 @@ public class ProductsController : ControllerBase
             throw new InvalidOperationException("\nThe environment variable 'MYSQL_PASSWORD' is not set");
         }
 
-        _connectionString = $"server=localhost; database=test_schema;users=apiuser;password={mysqlPassword};";
+        _connectionString = $"server=localhost; database=test_schema;user=apiuser;password={mysqlPassword};";
+        _logger = logger;
     }
 
     [HttpGet]
@@ -30,20 +31,24 @@ public class ProductsController : ControllerBase
     {
         // list to add our products from the db
         var products = new List<ProductData>();
+        _logger.LogInformation("GetProducts() is called!");
         using (var connection = new MySqlConnection(_connectionString))
         {
             connection.Open();
             var query = new MySqlCommand("SELECT * FROM products", connection);
+            
             using (var reader = query.ExecuteReader())
             {
+                _logger.LogInformation("Query running!");
                 while (reader.Read())
                 {
+                    _logger.LogInformation("Found product: {Name}", reader.GetString("name"));
                     products.Add(new ProductData(
                         reader.GetInt32("id"),
                         reader.GetString("name"),
                         reader.GetInt32("price"),
                         reader.GetString("category"),
-                        reader.GetString("imageUrl")
+                        reader.GetString("image_url")
                     ));
                 }
             }
