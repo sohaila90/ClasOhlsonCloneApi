@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ClasOhlsonCloneApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ccc417edef4134ef1e02f740b74cf62683eed290")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+93d18e7ca9d198370b589f2082ecd17c8745d010")]
 [assembly: System.Reflection.AssemblyProductAttribute("ClasOhlsonCloneApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ClasOhlsonCloneApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

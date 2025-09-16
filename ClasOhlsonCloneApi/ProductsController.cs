@@ -27,7 +27,7 @@ public class ProductsController : ControllerBase
     }
 
     [HttpGet]
-    public IActionResult GetProducts() 
+    public IActionResult GetProducts()
     {
         // list to add our products from the db
         var products = new List<ProductData>();
@@ -36,7 +36,7 @@ public class ProductsController : ControllerBase
         {
             connection.Open();
             var query = new MySqlCommand("SELECT * FROM products", connection);
-            
+
             using (var reader = query.ExecuteReader())
             {
                 _logger.LogInformation("Query running!");
@@ -56,6 +56,39 @@ public class ProductsController : ControllerBase
 
         return Ok(products);
 
-        }
-        
     }
+
+    [HttpGet("{id}")]
+    public IActionResult GetProductsById(int id)
+    {
+        ProductData? product = null;
+
+        using var connection = new MySqlConnection(_connectionString);
+        connection.Open();
+        var query = new MySqlCommand("SELECT * FROM products WHERE id = @id", connection);
+        query.Parameters.AddWithValue("id", id);
+
+        using (var reader = query.ExecuteReader())
+        {
+            if (reader.Read())
+            {
+                product = new ProductData(
+                    reader.GetInt32("id"),
+                    reader.GetString("name"),
+                    reader.GetInt32("price"),
+                    reader.GetString("category"),
+                    reader.GetString("image_url")
+                );
+            }
+        }
+
+        if (product == null)
+        {
+            return NotFound(new { message = "Product not found" });
+
+
+        }
+
+        return Ok(product);
+    }
+}
