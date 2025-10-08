@@ -3,11 +3,13 @@
 This is the backend for my school project — a simple clone of the Clas Ohlson online store.
 It provides API endpoints for products, users, and the shopping cart.
 
+---
+
 ## Technology
 - **ASP.NET Core Web API (.NET 9)**
 - **C# 13**
 - **Entity Framework Core (MySQL)**
-- **Scalar / Swagger** for API documentation
+- **Scalar** for API documentation
 
 ## Run Locally
 
@@ -36,37 +38,33 @@ http://localhost:5050
 
 ## API Endpoints
 
-# Get all products
+Products
 ```bash
-curl http://localhost:5050/Product
-```
-
-# Get a product by ID
-```bash
-curl http://localhost:5050/Product/1
+GET  /Products
+GET  /Products/{id}
 ```
 
 ## Users
 
-# Get all users
-
 ```bash
-curl http://localhost:5050/User
-```
-
-# Get a user by ID
-
-```bash
-curl http://localhost:5050/User/1
+GET  /Users
+GET  /Users/{id}
+POST /Users/register
+POST /Users/login
 ```
 
 ## Cart
 
-# View cart
-
 ```bash
-curl http://localhost:5050/Cart
+GET    /Cart
+POST   /Cart/add
+DELETE /Cart/remove
 ```
+
+## API Docs
+Once running, you can test all endpoints in your browser via:
+- Scalar UI: http://localhost:5050/scalar/v1
+- Swagger UI: http://localhost:5050/swagger/index.html
 
 # Add item to cart
 
