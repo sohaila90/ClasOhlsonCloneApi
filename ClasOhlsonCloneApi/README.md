@@ -11,6 +11,8 @@ It provides API endpoints for products, users, and the shopping cart.
 - **Entity Framework Core (MySQL)**
 - **Scalar** for API documentation
 
+---
+
 ## Run Locally
 
 ### Clone the project
@@ -61,11 +63,6 @@ POST   /Cart/add
 DELETE /Cart/remove
 ```
 
-## API Docs
-Once running, you can test all endpoints in your browser via:
-- Scalar UI: http://localhost:5050/scalar/v1
-- Swagger UI: http://localhost:5050/swagger/index.html
-
 # Add item to cart
 
 ```bash
@@ -78,3 +75,12 @@ curl http://localhost:5050/Cart/add \
     "userId": 1
   }'
 ```
+
+## API Docs
+Once running, you can test all endpoints in your browser via:
+- Scalar UI: http://localhost:5050/scalar/v1
+
+---
+
+## About
+Made this as a school project to get hands-on experience with C#, building a Web API, and working with databases.
