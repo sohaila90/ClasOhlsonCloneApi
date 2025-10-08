@@ -34,8 +34,7 @@ public class CartController : ControllerBase
          using (var connection = new MySqlConnection(_connectionString))
          {
             connection.Open();
-
-            // lager et nytt commando object som skal kjøre SQL på databasen.
+            
             var cmd = new MySqlCommand("""
                                        INSERT INTO cart_items(product_id, quantity, user_id)
                                        VALUES(@product_id, @quantity, @user_id) 
@@ -52,7 +51,6 @@ public class CartController : ControllerBase
       }
       catch (Exception ex)
       {
-         Console.WriteLine($"Feil ved legg-til-handlekurv: {ex}");
          return StatusCode(500, "Kunne ikke legge til i handlekurv");
       }
    }
