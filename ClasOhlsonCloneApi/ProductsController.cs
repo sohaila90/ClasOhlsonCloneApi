@@ -29,7 +29,6 @@ public class ProductsController : ControllerBase
     [HttpGet]
     public IActionResult GetProducts()
     {
-        // list to add our products from the db
         var products = new List<ProductData>();
         _logger.LogInformation("GetProducts() is called!");
         using (var connection = new MySqlConnection(_connectionString))

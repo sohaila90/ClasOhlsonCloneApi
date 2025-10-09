@@ -73,7 +73,6 @@ public class CartController : ControllerBase
             {
                try
                {
-                  // håndterer NULL ved å gi default 0
                   int id = reader.IsDBNull(reader.GetOrdinal("id")) ? 0 : reader.GetInt32("id");
                   int productId = reader.IsDBNull(reader.GetOrdinal("product_id")) ? 0 : reader.GetInt32("product_id");
                   int quantity = reader.IsDBNull(reader.GetOrdinal("quantity")) ? 0 : reader.GetInt32("quantity");
@@ -131,7 +130,6 @@ public class CartController : ControllerBase
       }
       catch (Exception ex)
       {
-         Console.WriteLine($"Feil ved sletting: {ex}");
          return StatusCode(500, "Kunne ikke slette produkt");
       }
    }
